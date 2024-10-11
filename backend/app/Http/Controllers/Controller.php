@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 abstract class Controller
 {
 
-    // constructor para modelos que hereden el coso
+    // constructor para modelos que hereden
     protected $model;
 
     public function __construct($model)
