@@ -63,4 +63,11 @@ abstract class Controller
         $registro = $this->model->findOrFail($id);
         return response()->json($registro);
     }
+
+    // metodo para listar por campo
+    public function listarCampo($campo, $valor)
+    {
+        $registros = $this->model->where($campo, $valor)->get();
+        return response()->json($registros);
+    }
 }
